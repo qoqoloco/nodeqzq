@@ -35,7 +35,6 @@ app.post('/cord', (req,res) => {
             
         });
 
-        
         setTimeout(() => {
             
             const url = `http://api.weatherstack.com/current?access_key=8c8ab75ab900c8d910a85444a2d47174&query=${arr[1]},${arr[0]}&units=m`;
@@ -49,6 +48,7 @@ app.post('/cord', (req,res) => {
                     
              });
             
+
            setTimeout(() => {
             res.redirect('/wtr');
             app.use('/wtr', (req,res) => {
@@ -65,6 +65,11 @@ app.post('/cord', (req,res) => {
     
 });//apuse
 
+
+
+app.get('/about',(req,res) => {
+    res.render('bars');
+})
 
  app.use('/gettemp',(req,res) => {
      console.log(arr[0]);

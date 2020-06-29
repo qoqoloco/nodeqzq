@@ -18,3 +18,13 @@ button{
     border-radius: 10px;
     padding: 5px;
 }
+#line{
+    border: 1px solid gray ;
+    width: 50%;
+    margin-left: 25% ;
+}
+
+a{
+    color: black;
+    margin-left: 400px;
+}
