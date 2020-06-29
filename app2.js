@@ -4,7 +4,7 @@ const hbs = require('hbs')
 const app = express()
 const bodyparser = require('body-parser');
 const pubway = path.join(__dirname,'./views/public')
-
+const port = process.env.PORT || 3000;
 
 const partialspath = path.join(__dirname,'/views/partials')
 app.set('view engine','hbs')
@@ -73,7 +73,7 @@ app.post('/cord', (req,res) => {
  });
 
 
-app.listen(3000,() => {
-    console.log('Server is runing on Port 3000');
+app.listen(port,() => {
+    console.log('Server is runing on Port'+ port);
     
 });
